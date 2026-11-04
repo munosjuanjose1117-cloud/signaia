@@ -26,6 +26,7 @@ const TYPES = {
   ".gif": "image/gif",
   ".mp4": "video/mp4",
   ".webm": "video/webm",
+  ".json": "application/json; charset=utf-8",
 };
 
 // La IA solo recibe lo que está verificado en el catálogo, para que no invente cómo se hace una seña.

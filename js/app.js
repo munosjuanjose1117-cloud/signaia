@@ -453,7 +453,22 @@ importInput.addEventListener("change", () => {
   importInput.value = "";
 });
 
+// Quien abre la app por primera vez arranca con los ejemplos que grabó el grupo.
+async function loadDefaultSamples() {
+  if (trainedSigns() > 0) return;
+  try {
+    const response = await fetch("datos/ejemplos.json");
+    if (!response.ok) return;
+    samples = mergeSamples(samples, await response.json());
+    renderSigns();
+    if (!stream) showIdleResult();
+  } catch (error) {
+    console.error(error);
+  }
+}
+
 initLookup();
 renderSigns();
 showIdleResult();
+loadDefaultSamples();
 loadModel();
