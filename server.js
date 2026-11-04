@@ -12,7 +12,7 @@ try {
 const PORT = Number(process.env.PORT) || 5173;
 const ROOT = __dirname;
 const NIM_BASE_URL = process.env.NIM_BASE_URL || "https://integrate.api.nvidia.com/v1";
-const NIM_MODEL = process.env.NIM_MODEL || "mistralai/mistral-large-2-instruct";
+const NIM_MODEL = process.env.NIM_MODEL || "nvidia/nemotron-3-ultra-550b-a55b";
 const NIM_TIMEOUT_MS = 30000;
 const MAX_BODY_BYTES = 1024;
 const TYPES = {
@@ -31,7 +31,7 @@ const TYPES = {
 
 // La IA solo recibe lo que está verificado en el catálogo, para que no invente cómo se hace una seña.
 const SYSTEM_PROMPT = `Eres el tutor de SignaIA, una app para aprender Lengua de Señas Colombiana (LSC).
-Responde en español, con tono amable y en máximo 4 oraciones.
+Responde en español, con tono amable, en máximo 4 oraciones y en texto plano, sin Markdown.
 Usa únicamente la información del catálogo que recibes sobre el significado y la forma de la seña.
 Nunca describas configuraciones de mano ni movimientos que no estén en el catálogo, ni inventes datos sobre LSC.
 Si el catálogo no trae información, dilo y recomienda consultar una fuente verificada, como el INSOR, o a una persona usuaria de LSC.
