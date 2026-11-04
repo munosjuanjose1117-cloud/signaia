@@ -1,0 +1,198 @@
+:root {
+  --bg: #10131a;
+  --surface: #1a1f2b;
+  --border: #2d3445;
+  --text: #eef1f6;
+  --muted: #a2abbd;
+  --accent: #4f7cff;
+  --error: #ff8080;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, "Segoe UI", sans-serif;
+}
+
+header { padding: 20px 16px 8px; max-width: 1100px; margin: auto; }
+h1 { margin: 0; font-size: 1.6rem; }
+header p { margin: 4px 0 0; color: var(--muted); }
+
+main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 16px;
+  max-width: 1100px;
+  margin: auto;
+  padding: 12px 16px 24px;
+}
+
+.stage {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #000;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+/* El video y los puntos se voltean juntos para que funcione como un espejo. */
+.stage video, .stage canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scaleX(-1);
+}
+
+#placeholder {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  color: var(--muted);
+}
+
+#placeholder[hidden] { display: none; }
+
+.panel {
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: 0;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:disabled { opacity: .5; cursor: default; }
+
+#status { min-height: 3em; margin: 12px 0; color: var(--muted); }
+#status.error { color: var(--error); }
+
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 0 0 12px;
+}
+
+.stats div { padding: 8px; border: 1px solid var(--border); border-radius: 6px; }
+dt { color: var(--muted); font-size: .8rem; }
+dd { margin: 0; font-size: 1.4rem; font-weight: 600; }
+
+#hands { margin: 0; padding: 0; list-style: none; }
+#hands li { display: flex; justify-content: space-between; padding: 6px 0; }
+
+h2 { margin: 0 0 8px; font-size: 1rem; }
+
+.result { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border); }
+#resultName { margin: 0; font-size: 1.3rem; font-weight: 700; }
+#resultDetail { margin: 4px 0 0; color: var(--muted); font-size: .85rem; }
+
+#explain { margin-top: 12px; }
+#explanation { margin-top: 12px; }
+#explanation[hidden] { display: none; }
+h3 { margin: 0 0 4px; font-size: .95rem; }
+#explanationText { margin: 0 0 6px; white-space: pre-wrap; }
+#explanationText.error { color: var(--error); }
+#explanation small { color: var(--muted); }
+
+.learn {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+#practiceScore { color: var(--muted); }
+#practiceFeedback { font-weight: 600; }
+#practiceFeedback.success { color: #6fdc9a; }
+
+#lookupInput {
+  width: 100%;
+  padding: 10px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font: inherit;
+}
+
+#lookupResults { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; padding: 0; list-style: none; }
+#lookupResults button { width: auto; padding: 6px 10px; }
+
+.reference { display: block; width: 100%; max-height: 280px; object-fit: contain; background: #000; border-radius: 6px; }
+
+.trainer {
+  grid-column: 1 / -1;
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.hint { margin: 0 0 12px; color: var(--muted); }
+
+#signs { margin: 0 0 12px; padding: 0; list-style: none; }
+
+#signs li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto auto;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+  border-top: 1px solid var(--border);
+}
+
+#signs button { width: auto; padding: 6px 10px; }
+.count { color: var(--muted); }
+
+.secondary {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.actions button { width: auto; }
+
+.file {
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.file input { display: none; }
+
+footer {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 16px 24px;
+  color: var(--muted);
+  font-size: .8rem;
+}
+
+@media (max-width: 760px) {
+  main { grid-template-columns: minmax(0, 1fr); }
+  .learn { grid-template-columns: minmax(0, 1fr); }
+}

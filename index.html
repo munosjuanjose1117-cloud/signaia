@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SignaIA</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>SignaIA</h1>
+    <p>Asistente de aprendizaje de Lengua de Señas Colombiana</p>
+  </header>
+
+  <main>
+    <section class="stage">
+      <video id="video" autoplay playsinline muted></video>
+      <canvas id="overlay"></canvas>
+      <p id="placeholder">La cámara está apagada</p>
+    </section>
+
+    <aside class="panel">
+      <button id="toggle" type="button" disabled>Encender cámara</button>
+      <p id="status" role="status">Cargando modelo…</p>
+
+      <dl class="stats">
+        <div><dt>Manos</dt><dd id="handCount">0</dd></div>
+        <div><dt>FPS</dt><dd id="fps">0</dd></div>
+      </dl>
+
+      <ul id="hands"></ul>
+
+      <div class="result">
+        <h2>Reconocimiento</h2>
+        <p id="resultName">Sin ejemplos</p>
+        <p id="resultDetail">Graba ejemplos de al menos 2 señas.</p>
+        <button id="explain" type="button" class="secondary" disabled>Explicar con IA</button>
+        <div id="explanation" hidden>
+          <h3 id="explanationTitle"></h3>
+          <p id="explanationText" aria-live="polite"></p>
+          <small>Generado por IA. Confirma los detalles con una fuente de LSC.</small>
+        </div>
+      </div>
+    </aside>
+
+    <section class="learn">
+      <div>
+        <h2>Practicar</h2>
+        <button id="practiceButton" type="button" disabled>Empezar práctica</button>
+        <p id="practiceScore">Aciertos: 0 de 0</p>
+        <div id="practiceTarget"></div>
+        <p id="practiceFeedback" aria-live="polite">Enciende la cámara y graba ejemplos de al menos 2 señas.</p>
+      </div>
+      <div>
+        <h2><label for="lookupInput">Buscar una palabra</label></h2>
+        <input id="lookupInput" type="search" placeholder="Escribe una palabra">
+        <ul id="lookupResults"></ul>
+        <div id="lookupDetails"></div>
+      </div>
+    </section>
+
+    <section class="trainer">
+      <h2>Ejemplos por seña</h2>
+      <p class="hint">Haz la seña con una mano, más arriba que la otra, y muévela un poco mientras se graba. Conviene que graben varias personas.</p>
+      <ul id="signs"></ul>
+      <div class="actions">
+        <button id="exportSamples" type="button" class="secondary">Exportar ejemplos</button>
+        <label class="secondary file">
+          Importar ejemplos
+          <input id="importSamples" type="file" accept="application/json,.json">
+        </label>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    GIF de referencia: proyecto "Guantes traductores de lengua de señas colombiana" de Jorge Andrés Rua Vera,
+    Joseph Daniel Pacheco Gutiérrez y Julianna Sophia Schutmaat Carrascal (Corporación Universitaria Reformada).
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
