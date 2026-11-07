@@ -1,0 +1,63 @@
+{
+ "version": 1,
+ "words": [
+  {
+   "id": "hola",
+   "name": "HOLA",
+   "meaning": "loc. Expresión familiar de saludo.",
+   "guide": "La mano en ‘5’ se coloca con la palma hacia adentro. Las cejas se elevan y se vocaliza la palabra. La mano siempre se dirige hacia el lugar del interlocutor.",
+   "insor": "DECIR-HOLA"
+  },
+  {
+   "id": "gracias",
+   "name": "GRACIAS",
+   "meaning": "1. v. Agradecer. 2. loc. Expresión cortés con que se agradece algún gesto amable, un favor o un servicio. 3. loc. Por causa de algo o de alguien.",
+   "guide": "La mano en ‘5’ con los dedos juntos excepto el pulgar y la palma hacia atrás, toca el mentón con las yemas de los dedos e inmediatamente se dirige hacia la palma de la mano contraria, hasta hacer contacto con ella. La cabeza se inclina.",
+   "insor": "AGRADECER/DECIR GRACIAS/GRACIAS A"
+  },
+  {
+   "id": "yo",
+   "name": "YO",
+   "meaning": "pron. Refiere la primera persona del singular.",
+   "guide": "La mano en ‘1’ con la palma hacia atrás toca con la punta del índice el pecho o un punto muy cercano a este.",
+   "insor": "YO"
+  },
+  {
+   "id": "tu",
+   "name": "TÚ",
+   "meaning": "pron. Refiere la segunda persona del singular.",
+   "guide": "La mano en ‘1’ con la palma hacia abajo o hacia adentro, se dirige hacia el pecho del interlocutor o hacia el lugar en el que se supone está presente, que generalmente es adelante del señante. Puede acompañarse con el estiramiento de los labios, como al pronunciar tú, y la mirada se dirige a quien se habla.",
+   "insor": "TÚ"
+  },
+  {
+   "id": "amigo",
+   "name": "AMIGO",
+   "meaning": "n. Persona que guarda una relación de afecto, cariño y solidaridad con otra.",
+   "guide": "Las manos en ‘1’, una con la palma hacia arriba y la otra hacia abajo, se acercan hasta que los índices se tocan por las yemas. Enseguida las manos giran sobre las muñecas hasta quedar en la posición inversa y nuevamente las yemas se tocan.",
+   "insor": "AMIGO"
+  },
+  {
+   "id": "ayudar",
+   "name": "AYUDAR",
+   "meaning": "v. Cooperar en la realización de algo o contribuir a que ocurra. n. Colaboración que se da a alguien para que pueda alcanzar un fin.",
+   "guide": "La mano cerrada con el borde externo hacia abajo se coloca sobre la palma de la mano contraria y luego ambas se mueven hacia adelante.",
+   "insor": "AYUDAR/AYUDA"
+  },
+  {
+   "id": "casa",
+   "name": "CASA",
+   "meaning": "1. n. Construcción destinada a vivienda. 2. n. Familia de una persona.",
+   "guide": "(El techo) Las manos en ‘5’ con los dedos juntos, excepto el pulgar, las palmas hacia adentro, ligeramente inclinadas, se unen por las yemas de los dedos. Pueden unirse y separarse rápidamente las puntas de los dedos.",
+   "insor": "CASA"
+  },
+  {
+   "id": "por-favor",
+   "name": "POR FAVOR",
+   "meaning": "loc. Expresión de cortesía que se emplea para solicitar algo.",
+   "guide": "La mano cerrada con la palma hacia atrás describe círculos sobre el pecho.",
+   "insor": "POR-FAVOR"
+  }
+ ],
+ "samples": {},
+ "references": {}
+}
